@@ -1,0 +1,153 @@
+/* src/pages/StoreList.css */
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Container */
+.store-container {
+  padding: 20px;
+  font-family: "Segoe UI", Arial, sans-serif;
+  max-width: 1000px;
+  margin: auto;
+}
+
+/* Header */
+.store-header {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #222;
+}
+
+/* Search Box + Button Wrapper */
+.search-wrapper {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+  gap: 10px;
+}
+
+/* Search Box */
+.search-box {
+  padding: 10px 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  width: 250px;
+  font-size: 16px;
+  transition: all 0.3s;
+}
+
+.search-box:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.4);
+}
+
+/* Search Button */
+.search-btn {
+  padding: 10px 16px;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  font-weight: 600;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.search-btn:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+/* Store List */
+.store-list {
+  margin-top: 20px;
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 15px;
+}
+
+/* Store Item */
+.store-item {
+  padding: 16px;
+  border: 1px solid #eee;
+  border-radius: 10px;
+  transition: transform 0.2s, box-shadow 0.2s;
+  background-color: #fff;
+}
+
+.store-item:hover {
+  transform: scale(1.03);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+/* Store Name */
+.store-name {
+  font-size: 20px;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 6px;
+}
+
+/* Store Address */
+.store-address {
+  color: #666;
+  margin: 4px 0 8px;
+  font-size: 14px;
+}
+
+/* Store Rating */
+.store-rating {
+  font-weight: bold;
+  font-size: 15px;
+}
+
+/* Dynamic rating colors */
+.store-rating.high {
+  color: green;
+}
+.store-rating.medium {
+  color: orange;
+}
+.store-rating.low {
+  color: red;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .store-header {
+    font-size: 24px;
+  }
+  .search-box {
+    width: 100%;
+    font-size: 15px;
+  }
+  .search-btn {
+    width: 100%;
+    font-size: 15px;
+  }
+  .store-item {
+    padding: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .store-header {
+    font-size: 20px;
+  }
+  .store-name {
+    font-size: 18px;
+  }
+  .store-rating {
+    font-size: 14px;
+  }
+}
